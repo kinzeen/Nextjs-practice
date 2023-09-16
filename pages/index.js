@@ -5,23 +5,26 @@ import Link from 'next/link';
 const Home = ({data}) => {
   const results = data.results ?? [];
 
-  const renderedResults = results.map((item, index) => (
-    <div key={index}>
-      <div>
-        start_time: {item.start_time}
-      </div>
-      <div>
-        end_time: {item.end_time}
-      </div>
+  // data.resultsのデバッグをする
+  console.log(results);
 
-      <div>
-        stage1: {item.stages[0].name}
-      </div>
-      <div>
-        stage2: {item.stages[1].name}
-      </div>
-    </div>
-  ));
+  // const renderedResults = results.map((item, index) => (
+  //   <div key={index}>
+  //     <div>
+  //       start_time: {item.start_time}
+  //     </div>
+  //     <div>
+  //       end_time: {item.end_time}
+  //     </div>
+
+  //     <div>
+  //       stage1: {item.stages[0].name}
+  //     </div>
+  //     <div>
+  //       stage2: {item.stages[1].name}
+  //     </div>
+  //   </div>
+  // ));
 
   return (
     <div className="container mx-auto p-4">
@@ -32,7 +35,7 @@ const Home = ({data}) => {
       <Link href="/about">About Page</Link>
       <div>
         <p>Data from the server: </p>
-        {renderedResults}
+        {/* {renderedResults} */}
       </div>
     </div>
   );
